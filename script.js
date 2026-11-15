@@ -45,7 +45,7 @@ if ("IntersectionObserver" in window) {
 }
 
 // ======================================
-// 2- زر الرجوع إلى أعلى الصفحة
+// 2- زر الرجوع لأعلى الصفحة
 // ======================================
 const topButton = document.createElement("button");
 topButton.textContent = "↑";
@@ -200,11 +200,11 @@ if (lightbox) {
     lightbox.querySelector(".lightbox-close")?.addEventListener("click", closeLightbox);
 
     lightbox.querySelector(".lightbox-prev")?.addEventListener("click", () => {
-        showGalleryImage(currentImageIndex - 1);
+        showGalleryImage(currentImageIndex + 1);
     });
 
     lightbox.querySelector(".lightbox-next")?.addEventListener("click", () => {
-        showGalleryImage(currentImageIndex + 1);
+        showGalleryImage(currentImageIndex - 1);
     });
 
     lightbox.addEventListener("click", (event) => {
